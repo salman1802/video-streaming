@@ -1,0 +1,26 @@
+{
+  "name": "video-streaming-backend",
+  "version": "1.0.0",
+  "description": "Video streaming backend with Express and ffmpeg",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "multer": "^1.4.5-lts.1",
+    "cors": "^2.8.5",
+    "fluent-ffmpeg": "^2.1.2",
+    "uuid": "^9.0.1",
+    "path": "^0.12.7",
+    "fs-extra": "^11.1.1",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "keywords": ["video", "streaming", "express", "ffmpeg", "hls"],
+  "author": "",
+  "license": "MIT"
+}

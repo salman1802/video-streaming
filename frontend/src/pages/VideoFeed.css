@@ -1,0 +1,297 @@
+.feed-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.feed-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.feed-header h1 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #333;
+}
+
+.refresh-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.refresh-btn:hover {
+  background-color: #f0f0f0;
+  transform: rotate(180deg);
+}
+
+.refresh-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Loading and Error States */
+.loading-state,
+.error-state,
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.loading-state p {
+  margin-top: 20px;
+  color: #666;
+}
+
+.error-state .error-icon,
+.empty-state .empty-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.error-state h3,
+.empty-state h3 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.error-state p,
+.empty-state p {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.retry-btn {
+  background: #dc3545;
+}
+
+.retry-btn:hover {
+  background: #c82333;
+}
+
+/* Video Feed */
+.video-feed {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.video-post {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
+
+.video-post:hover {
+  box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+}
+
+/* Post Header */
+.post-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #405de6, #5851db, #833ab4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: white;
+}
+
+.user-details h4 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 2px 0;
+}
+
+.post-time {
+  font-size: 12px;
+  color: #666;
+}
+
+.post-menu {
+  font-size: 20px;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.post-menu:hover {
+  background-color: #f0f0f0;
+}
+
+/* Video Content */
+.video-content {
+  position: relative;
+  width: 100%;
+}
+
+.feed-video {
+  border-radius: 0;
+}
+
+/* Post Actions */
+.post-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.action-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 0;
+  font-size: 14px;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.action-btn:hover {
+  color: #405de6;
+  transform: scale(1.05);
+}
+
+.action-btn .icon {
+  font-size: 18px;
+}
+
+.save-btn .action-btn {
+  padding: 8px;
+}
+
+/* Post Info */
+.post-info {
+  padding: 16px 20px;
+}
+
+.view-count {
+  font-size: 12px;
+  color: #666;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.video-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 8px 0;
+  line-height: 1.4;
+}
+
+.video-description {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Load More */
+.load-more-container {
+  text-align: center;
+  margin-top: 40px;
+  padding-bottom: 20px;
+}
+
+.load-more-btn {
+  min-width: 200px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .feed-container {
+    padding: 16px;
+    max-width: 100%;
+  }
+
+  .feed-header {
+    margin-bottom: 20px;
+  }
+
+  .feed-header h1 {
+    font-size: 24px;
+  }
+
+  .video-feed {
+    gap: 30px;
+  }
+
+  .video-post {
+    border-radius: 12px;
+  }
+
+  .post-header,
+  .post-actions,
+  .post-info {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .action-buttons {
+    gap: 16px;
+  }
+
+  .action-btn span:last-child {
+    display: none; /* Hide text on mobile, keep only icons */
+  }
+}
+
+@media (max-width: 480px) {
+  .feed-container {
+    padding: 12px;
+  }
+
+  .video-post {
+    border-radius: 0;
+    margin: 0 -12px;
+  }
+
+  .feed-header,
+  .load-more-container {
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+}
